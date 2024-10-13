@@ -1,7 +1,7 @@
 import random
 
 
-# Stap 1: Laad woorden uit een tekstbestand
+# woorden laden
 def laad_woorden():
     try:
         with open("woordenlijst.txt", "r") as bestand:
@@ -13,18 +13,19 @@ def laad_woorden():
         return []
 
 
-# Stap 2: Kies een willekeurig woord
+#random woord
 def kies_willekeurig_woord(woorden):
     return random.choice(woorden).lower()
 
 
-# Stap 3: Vraag de naam van de gebruiker
+#naam
 def vraag_gebruikersnaam():
     naam = input("Wat is je naam? ")
     return naam
 
 
-# Stap 4: Start het raadspel
+
+#start
 def raadspel(woord):
     goed_geraden = ["_"] * len(woord)  # Maak een lijst voor geraden letters
     pogingen = 5  # Aantal pogingen
@@ -60,7 +61,7 @@ def raadspel(woord):
         print(f"Jammer! Je hebt geen pogingen meer. Het woord was '{woord}'.")
 
 
-# Stap 5: Hoofdprogramma
+hoofdmenu
 def hoofd():
     woorden = laad_woorden()
     if woorden:
